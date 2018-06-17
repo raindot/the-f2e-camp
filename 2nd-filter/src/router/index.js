@@ -1,14 +1,14 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Filter from '@/components/Filter';
+import Vue from "vue";
+import Router from "vue-router";
+import Index from "@/components/Index.vue";
 
 
 Vue.use(Router);
 
 export default new Router({
   routes: [{
-    path: '/',
-    name: 'Filter',
-    component: Filter,
+    path: "/",
+    name: "Index",
+    component: Index,
   }],
 });

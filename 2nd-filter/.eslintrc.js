@@ -25,26 +25,20 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
-    // don't require .vue extension when importing
-    'import/extensions': ['error', 'always', {
-      js: 'never',
-      vue: 'never'
+    "space-before-function-paren": ["error", "never"],
+    "no-trailing-spaces": [2, {
+      skipBlankLines: true,
+      ignoreComments: true
     }],
-    // disallow reassignment of function parameters
-    // disallow parameter object manipulation except for specific exclusions
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'state', // for vuex state
-        'acc', // for reduce accumulators
-        'e' // for e.returnvalue
-      ]
-    }],
-    // allow optionalDependencies
-    'import/no-extraneous-dependencies': ['error', {
-      optionalDependencies: ['test/unit/index.js']
-    }],
+    semi: [2, "always"],
+    quotes: [2, "double"],
+    // allow async-await
+    "generator-star-spacing": "off",
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-multiple-empty-lines": ["warn", {
+      max: 2
+    }],
+    "allowTemplateLiterals": true
   }
 }
